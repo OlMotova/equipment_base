@@ -1,12 +1,6 @@
 # -*- coding: utf-8 -*-
 from functions import *
-from service_functions import *
-import pandas as pd
-import ipaddress
-from datetime import datetime
-import sys
-import numpy as np
-from contextlib import redirect_stdout
+
 
 df = df_loading('Main_file.xlsx')
 equipment_df = df_loading('equipment_database.xlsx')
@@ -28,6 +22,7 @@ stickers_count = int(input("Введите колличество этикето
 #______________________________________
 
 #program part
+
 text, flag = calculating_button (df, equipment_df, equipment_name, equipment_type, stickers_count)
 
 text_out = save_button (df, equipment_df, equipment_name, equipment_type, stickers_count)
